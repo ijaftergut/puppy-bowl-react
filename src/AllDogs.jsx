@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from "axios"
-
+import AddDogForm from './AddDogForm'
 const AllDogs = () => {
     const [allDogs, setAllDogs]  = useState([])
     useEffect (()=>{
@@ -15,6 +15,7 @@ const AllDogs = () => {
     return (
         <div>
             <h1>All Dogs</h1>
+            <AddDogForm/>
             {
                 allDogs.map((dog, idx)=>{
                     return(
